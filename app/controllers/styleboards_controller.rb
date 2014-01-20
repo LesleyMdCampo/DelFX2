@@ -69,6 +69,6 @@ class StyleboardsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def styleboard_params
-      params.require(:styleboard).permit(:description, :image, :place, :name)
+      params[:styleboard]
     end
 end
