@@ -6,11 +6,11 @@
 
 <center><table>
   <tbody>
-    <% @styleboard.sboards.sort_by { |a| a[:place]}.each do |sboard| %>
+    <% @styleboard.s_boards.sort_by { |a| a[:place]}.each do |sboard| %>
     <tr>
       <td>
         <img class="board" src="<%= sboard.image_url %>">
-        <p><%= "#{@styleboard.name} ##{sboard.id}, Place##{sboard.place}"%></p>
+        <p><%= "#{@styleboard.name} ##{sboard.place}"%></p>
       </td>
       <% end %>
     </tr>

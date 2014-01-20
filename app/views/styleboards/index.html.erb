@@ -2,7 +2,7 @@
 
   <ul class="large-block-grid-3">
     <% @styleboards.each do |styleboard| %>
-      <li><img class="thumbnail" src="<%= styleboard.thumbnail_url %>"><h3><%= link_to styleboard.name, styleboard %></li>
+      <li><img class="thumbnail" src="<%= styleboard.image %>"><h3><%= link_to styleboard.name, styleboard %></li>
     <% end %>
   </ul>
 <br>
