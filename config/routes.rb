@@ -1,4 +1,6 @@
 Delfx2::Application.routes.draw do
+  resources :storyboards
+
   resources :s_boards
 
   resources :styleboards

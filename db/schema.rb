@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140120170201) do
+ActiveRecord::Schema.define(version: 20140120170427) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,6 +25,14 @@ ActiveRecord::Schema.define(version: 20140120170201) do
   end
 
   add_index "s_boards", ["styleboard_id"], name: "index_s_boards_on_styleboard_id", using: :btree
+
+  create_table "storyboards", force: true do |t|
+    t.string   "name"
+    t.string   "description"
+    t.string   "thumbnail_url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "styleboards", force: true do |t|
     t.text     "description"
