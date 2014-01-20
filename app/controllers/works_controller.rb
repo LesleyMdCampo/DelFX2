@@ -5,15 +5,15 @@ class WorksController < ApplicationController
   end
 
   def index
-    @works = Works.all
+    @works = Work.all
   end
 
   def new
-    @work = Works.new
+    @work = Work.new
   end
 
   def create
-    @work = Works.new(work_params)
+    @work = Work.new(work_params)
     @work.save
     redirect_to root_path
   end
@@ -33,7 +33,7 @@ class WorksController < ApplicationController
   
   private
   def set_work
-    @work = Works.find(params[:id])
+    @work = Work.find(params[:id])
   end
 
   def work_params
