@@ -1,14 +1,55 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Delfx2</title>
-  <%= stylesheet_link_tag    "application" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+<html lang="en" class="bg">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<%= yield %>
+    <title>DelFX</title>
 
-</body>
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "vendor/modernizr" %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+  <!-- <div class="contain-to-grid">   -->
+  <div class="wrapper">
+    <nav class="top-bar" data-topbar>
+      <ul class="title-area">
+        <li class="name">
+          <span style="height:45px; width:auto;"><%= image_tag "New_DelFX_Logo_Oct_2013.png" %></span>
+        </li>
+        <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+      </ul>
+
+      <section class="top-bar-section">
+        <!-- Right Nav Section -->
+        <!-- \ -->     
+      </section>
+    </nav>
+  <!-- </div> -->
+  <div class="row">
+    <div class="twelve columns" style="background-color:#fff;">
+  
+    <%= yield %>
+    </div>
+  </div>
+  <div class="push"></div>
+</div> <!-- close wrapper -->
+    <footer class="row">
+        <div class="large-12 columns footer">
+            <hr />
+            <div class="row">
+            <div class="large-12 columns-footer">
+                <h5 class="footer-info">DelFX | Austin, TX | dmdelc27 @ gmail dot com </h5>
+            </div>
+            </div><br/>
+          <div class="row">
+            <div class="large-12 columns-footer">
+                <p class="footer-info">&copy; DelFX | 2013 </p>
+            </div>
+          </div>
+        </div>
+    </footer>
+  </body>
 </html>
