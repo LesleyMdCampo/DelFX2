@@ -1,19 +1,20 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @storyboard.name %>
-</p>
+<h2><%= @storyboard.name %></h2>
 
-<p>
-  <strong>Description:</strong>
-  <%= @storyboard.description %>
-</p>
+<p><%= @storyboard.description %></p>
 
-<p>
-  <strong>Thumbnail url:</strong>
-  <%= @storyboard.thumbnail_url %>
-</p>
+<center><table>
+  <tbody>
+    <% @storyboard.boards.sort_by { |a| a[:place]}.each do |board| %>
+    <tr>
+      <td>
+        <img class="board" src="<%= board.image_url %>">
+        <p><%= "#{@storyboard.name} ##{board.id}, Place##{board.place}"%></p>
+      </td>
+      <% end %>
+    </tr>
+  </tbody>
+</table></center>
 
-<%= link_to 'Edit', edit_storyboard_path(@storyboard) %> |
-<%= link_to 'Back', storyboards_path %>
+<%= link_to 'Back to Storyboards', storyboards_path %>
