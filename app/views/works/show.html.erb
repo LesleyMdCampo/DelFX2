@@ -1,24 +1,5 @@
-<p id="notice"><%= notice %></p>
+  <h1><%= @work.name %></h1>
+    <center><iframe width="640" height="480" src="//www.youtube.com/embed/<%= @work.video_url %>" frameborder="0" allowfullscreen></iframe><center>
+  <p class="single-video-text"><%= @work.description %><p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @work.name %>
-</p>
-
-<p>
-  <strong>Image:</strong>
-  <%= @work.image %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @work.description %>
-</p>
-
-<p>
-  <strong>Video:</strong>
-  <%= @work.video %>
-</p>
-
-<%= link_to 'Edit', edit_work_path(@work) %> |
-<%= link_to 'Back', works_path %>
+    <%= link_to 'Back', works_path %>

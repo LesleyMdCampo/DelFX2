@@ -1,33 +1,6 @@
-<h1>Listing works</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Image</th>
-      <th>Description</th>
-      <th>Video</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @works.each do |work| %>
-      <tr>
-        <td><%= work.name %></td>
-        <td><%= work.image %></td>
-        <td><%= work.description %></td>
-        <td><%= work.video %></td>
-        <td><%= link_to 'Show', work %></td>
-        <td><%= link_to 'Edit', edit_work_path(work) %></td>
-        <td><%= link_to 'Destroy', work, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+<ul class="large-block-grid-3">
+  <h1>Works</h1>
+  <% @works.each do |work| %>
+    <li><img class="thumbnail" src="<%= work.thumbnail_url %>"><h3><%= link_to work.name, work %></li>
     <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Work', new_work_path %>
+</ul>

@@ -1,74 +1,43 @@
 class WorksController < ApplicationController
   before_action :set_work, only: [:show, :edit, :update, :destroy]
 
-  # GET /works
-  # GET /works.json
-  def index
-    @works = Work.all
-  end
-
-  # GET /works/1
-  # GET /works/1.json
   def show
   end
 
-  # GET /works/new
-  def new
-    @work = Work.new
+  def index
+    @works = Works.all
   end
 
-  # GET /works/1/edit
+  def new
+    @work = Works.new
+  end
+
+  def create
+    @work = Works.new(work_params)
+    @work.save
+    redirect_to root_path
+  end
+
   def edit
   end
 
-  # POST /works
-  # POST /works.json
-  def create
-    @work = Work.new(work_params)
-
-    respond_to do |format|
-      if @work.save
-        format.html { redirect_to @work, notice: 'Work was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @work }
-      else
-        format.html { render action: 'new' }
-        format.json { render json: @work.errors, status: :unprocessable_entity }
-      end
-    end
-  end
-
-  # PATCH/PUT /works/1
-  # PATCH/PUT /works/1.json
   def update
-    respond_to do |format|
-      if @work.update(work_params)
-        format.html { redirect_to @work, notice: 'Work was successfully updated.' }
-        format.json { head :no_content }
-      else
-        format.html { render action: 'edit' }
-        format.json { render json: @work.errors, status: :unprocessable_entity }
-      end
-    end
+    @work.update(work_params)
+    redirect_to root_path
   end
 
-  # DELETE /works/1
-  # DELETE /works/1.json
   def destroy
     @work.destroy
-    respond_to do |format|
-      format.html { redirect_to works_url }
-      format.json { head :no_content }
-    end
+    redirect_to root_path
+  end
+  
+  private
+  def set_work
+    @work = Works.find(params[:id])
   end
 
-  private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_work
-      @work = Work.find(params[:id])
-    end
+  def work_params
+    params.require(:work).permit(:name, :picture_url, :review)
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def work_params
-      params.require(:work).permit(:name, :image, :description, :video)
-    end
 end
