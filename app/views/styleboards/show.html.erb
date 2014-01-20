@@ -1,20 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<h2><%= @styleboard.name %></h2>
+<p>
+  <strong>Styleboard:</strong>
+  <%= @sboard.styleboard %>
+</p>
 
-<p><%= @styleboard.description %></p>
-
-<center><table>
-  <tbody>
-    <% @styleboard.sboards.sort_by { |a| a[:place]}.each do |board| %>
-    <tr>
-      <td>
-        <img class="board" src="<%= sboard.image_url %>">
-        <p><%= "#{@styleboard.name} ##{sboard.id}, Place##{board.place}"%></p>
-      </td>
-      <% end %>
-    </tr>
-  </tbody>
-</table></center>
-
-<%= link_to 'Back to Styleboards', styleboards_path %>
+<%= link_to 'Back', sboards_path %>

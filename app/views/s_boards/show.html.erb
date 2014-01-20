@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Styleboard:</strong>
+  <%= @s_board.styleboard %>
+</p>
+
+<p>
+  <strong>Image url:</strong>
+  <%= @s_board.image_url %>
+</p>
+
+<p>
+  <strong>Place:</strong>
+  <%= @s_board.place %>
+</p>
+
+<%= link_to 'Edit', edit_s_board_path(@s_board) %> |
+<%= link_to 'Back', s_boards_path %>
