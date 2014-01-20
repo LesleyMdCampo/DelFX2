@@ -1,7 +1,10 @@
 class WorksController < ApplicationController
-  before_action :set_work, only: [:show, :edit, :update, :destroy]
 
   def show
+    @work = Work.find(params[:id])
+  end
+
+  def contact
   end
 
   def index
@@ -19,22 +22,23 @@ class WorksController < ApplicationController
   end
 
   def edit
+    @work = Work.find(params[:id])
   end
 
   def update
+    @work = Work.find(params[:id])
     @work.update(work_params)
     redirect_to root_path
   end
 
   def destroy
+    @work = Work.find(params[:id])
     @work.destroy
     redirect_to root_path
   end
   
   private
-  def set_work
-    @work = Work.find(params[:id])
-  end
+  
 
   def work_params
     params.require(:work).permit(:name, :picture_url, :review)
