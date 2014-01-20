@@ -1,3 +1,79 @@
 // Place all the styles related to the Works controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+* {
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 20px;
+  background: url('Background_jpeg.jpg');
+}
+
+nav.top-bar {
+  height: 140px;
+  background: transparent;
+}
+
+ul.right {
+  height: 140px;
+}
+
+.top-bar-section ul li.active > a {
+  background: #2e8da8;
+  height: 45px;
+}
+
+.top-bar-section ul li.active > a:hover {
+  background: #06373e;
+}
+
+li.active a {
+  height: 140px;
+  text-transform: uppercase;
+  background: #2e8da8;
+  border: 1px solid black;
+}
+
+.thumbnail {
+  max-width: 300px;
+  height: auto;
+}
+
+.board {
+  max-width: 500px;
+  height: auto;
+}
+
+.logo {
+  height: 45px;
+  width: auto;
+}
+
+p.single-video-text {
+  text-align: left;
+  margin-top: 25px;
+}
+
+.footer-info {
+  color: white;
+  text-align: center;
+}
+
+.wrapper {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -155px; /* the bottom margin is the negative value of the footer's height */
+}
+footer, .push {
+  height: 155px; /* '.push' must be the same height as 'footer' */
+}
+
+.twelve.columns {
+  padding-bottom: 30px;
+}
