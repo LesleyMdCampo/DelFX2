@@ -1,5 +1,5 @@
   <h1><%= @work.name %></h1>
-    <center><iframe width="640" height="480" src="//www.youtube.com/embed/<%= @work.video_url %>" frameborder="0" allowfullscreen></iframe><center>
+    <center><iframe width="640" height="480" src="//www.youtube.com/embed/<%= @work.video %>" frameborder="0" allowfullscreen></iframe><center>
   <p class="single-video-text"><%= @work.description %><p>
 
     <%= link_to 'Back', works_path %>

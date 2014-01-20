@@ -1,6 +1,6 @@
 <ul class="large-block-grid-3">
   <h1>Works</h1>
   <% @works.each do |work| %>
-    <li><img class="thumbnail" src="<%= work.thumbnail_url %>"><h3><%= link_to work.name, work %></li>
+    <li><img class="thumbnail" src="<%= work.image %>"><h3><%= link_to work.name, work %></li>
     <% end %>
 </ul>
