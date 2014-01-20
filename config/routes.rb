@@ -10,4 +10,6 @@ Delfx2::Application.routes.draw do
   resources :works
   root 'works#welcome'
 
+  get 'works/contact', to: 'works#contact', as: 'contact'
+
 end
