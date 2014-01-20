@@ -11,10 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140120170427) do
+ActiveRecord::Schema.define(version: 20140120170559) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "boards", force: true do |t|
+    t.integer  "storyboard_id"
+    t.string   "image_url"
+    t.integer  "place"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "boards", ["storyboard_id"], name: "index_boards_on_storyboard_id", using: :btree
 
   create_table "s_boards", force: true do |t|
     t.integer  "styleboard_id"
@@ -37,7 +47,6 @@ ActiveRecord::Schema.define(version: 20140120170427) do
   create_table "styleboards", force: true do |t|
     t.text     "description"
     t.string   "image"
-    t.integer  "place"
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"

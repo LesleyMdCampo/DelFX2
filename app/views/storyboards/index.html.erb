@@ -1,0 +1,31 @@
+<h1>Listing storyboards</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Thumbnail url</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @storyboards.each do |storyboard| %>
+      <tr>
+        <td><%= storyboard.name %></td>
+        <td><%= storyboard.description %></td>
+        <td><%= storyboard.thumbnail_url %></td>
+        <td><%= link_to 'Show', storyboard %></td>
+        <td><%= link_to 'Edit', edit_storyboard_path(storyboard) %></td>
+        <td><%= link_to 'Destroy', storyboard, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Storyboard', new_storyboard_path %>

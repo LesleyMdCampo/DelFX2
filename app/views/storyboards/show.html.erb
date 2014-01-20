@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @storyboard.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @storyboard.description %>
+</p>
+
+<p>
+  <strong>Thumbnail url:</strong>
+  <%= @storyboard.thumbnail_url %>
+</p>
+
+<%= link_to 'Edit', edit_storyboard_path(@storyboard) %> |
+<%= link_to 'Back', storyboards_path %>
