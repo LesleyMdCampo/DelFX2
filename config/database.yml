@@ -50,4 +50,6 @@ production:
   adapter: postgresql
   encoding: unicode
   database: delfx2_production
+  pool: 5
+  port: 5432
  
