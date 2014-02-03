@@ -8,7 +8,7 @@ class WorksController < ApplicationController
   end
 
   def index
-    @works = Work.all
+    @works = Work.all.sort_by &:place
   end
 
   def new
