@@ -1,24 +1,20 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Image:</strong>
-  <%= @graphic.image %>
-</p>
+<h2><%= @graphic.name %></h2>
 
-<p>
-  <strong>Name:</strong>
-  <%= @graphic.name %>
-</p>
+<p><%= @graphic.description %></p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @graphic.description %>
-</p>
+<center><table>
+  <tbody>
+    <% @graphic.g_boards.sort_by { |a| a[:place]}.each do |board| %>
+    <tr>
+      <td>
+        <img class="board" src="<%= board.image %>">
+        <p><%= "#{@graphic.name} ##{board.place}"%></p>
+      </td>
+      <% end %>
+    </tr>
+  </tbody>
+</table></center>
 
-<p>
-  <strong>Place:</strong>
-  <%= @graphic.place %>
-</p>
-
-<%= link_to 'Edit', edit_graphic_path(@graphic) %> |
-<%= link_to 'Back', graphics_path %>
+<%= link_to 'Back to Graphic Designs', graphics_path %>
