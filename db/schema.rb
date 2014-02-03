@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140203225921) do
+ActiveRecord::Schema.define(version: 20140203234630) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -43,6 +43,7 @@ ActiveRecord::Schema.define(version: 20140203225921) do
     t.integer  "place"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "category"
   end
 
   create_table "s_boards", force: true do |t|
@@ -72,6 +73,16 @@ ActiveRecord::Schema.define(version: 20140203225921) do
     t.datetime "updated_at"
     t.integer  "place"
   end
+
+  create_table "vectors", force: true do |t|
+    t.integer  "graphic_id"
+    t.string   "image"
+    t.integer  "place"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "vectors", ["graphic_id"], name: "index_vectors_on_graphic_id", using: :btree
 
   create_table "works", force: true do |t|
     t.string   "name"
