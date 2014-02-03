@@ -4,7 +4,7 @@ class StoryboardsController < ApplicationController
   # GET /storyboards
   # GET /storyboards.json
   def index
-    @storyboards = Storyboard.all.all.sort_by &:place
+    @storyboards = Storyboard.all.sort_by &:place
   end
 
   # GET /storyboards/1

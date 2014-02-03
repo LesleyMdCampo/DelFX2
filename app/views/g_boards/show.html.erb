@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Graphic:</strong>
+  <%= @g_board.graphic %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @g_board.image %>
+</p>
+
+<p>
+  <strong>Place:</strong>
+  <%= @g_board.place %>
+</p>
+
+<%= link_to 'Edit', edit_g_board_path(@g_board) %> |
+<%= link_to 'Back', g_boards_path %>

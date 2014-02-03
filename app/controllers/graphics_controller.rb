@@ -4,7 +4,7 @@ class GraphicsController < ApplicationController
   # GET /graphics
   # GET /graphics.json
   def index
-    @graphics = Graphic.all
+    @graphics = Graphic.all.sort_by &:place
   end
 
   # GET /graphics/1

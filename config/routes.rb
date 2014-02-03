@@ -1,4 +1,6 @@
 Delfx2::Application.routes.draw do
+  resources :g_boards
+
   resources :graphics
 
   resources :boards
