@@ -4,7 +4,7 @@ class StyleboardsController < ApplicationController
   # GET /styleboards
   # GET /styleboards.json
   def index
-    @styleboards = Styleboard.all
+    @styleboards = Styleboard.all.sort_by &:place
   end
 
   # GET /styleboards/1

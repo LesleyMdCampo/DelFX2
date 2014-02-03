@@ -1,0 +1,33 @@
+<h1>Listing graphics</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Image</th>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Place</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @graphics.each do |graphic| %>
+      <tr>
+        <td><%= graphic.image %></td>
+        <td><%= graphic.name %></td>
+        <td><%= graphic.description %></td>
+        <td><%= graphic.place %></td>
+        <td><%= link_to 'Show', graphic %></td>
+        <td><%= link_to 'Edit', edit_graphic_path(graphic) %></td>
+        <td><%= link_to 'Destroy', graphic, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Graphic', new_graphic_path %>

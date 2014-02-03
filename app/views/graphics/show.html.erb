@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @graphic.image %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @graphic.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @graphic.description %>
+</p>
+
+<p>
+  <strong>Place:</strong>
+  <%= @graphic.place %>
+</p>
+
+<%= link_to 'Edit', edit_graphic_path(@graphic) %> |
+<%= link_to 'Back', graphics_path %>
