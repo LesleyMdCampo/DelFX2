@@ -12,27 +12,7 @@
   </head>
 
   <body>
-  <!-- <div class="contain-to-grid">   -->
-  <div class="wrapper">
-    <nav class="top-bar" data-topbar>
-      <ul class="title-area">
-        <li class="name">
-          <span style="height:45px; width:auto;"><%= image_tag "New_DelFX_Logo_Oct_2013.png" %></span>
-        </li>
-        <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
-      </ul>
-
-      <section class="top-bar-section">
-        <!-- Right Nav Section -->
-        <ul class="right">
-          <li class="active"><%= link_to 'Home', root_path %></li> 
-          <li class="active"><%= link_to 'Works', works_path %></li> 
-          <li class="active"><%= link_to 'Styleboards', styleboards_path %></li> 
-          <li class="active"><%= link_to 'Storyboards', storyboards_path %></li> 
-          <li class="active"><%= link_to 'Graphic Design', graphics_path %></li> 
-        </ul>       
-      </section>
-    </nav>
+  <%=render 'layouts/navbar' %>
   <!-- </div> -->
   <div class="row">
     <div class="twelve columns" style="background-color:#fff;">

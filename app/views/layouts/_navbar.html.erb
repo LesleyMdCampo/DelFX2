@@ -1,0 +1,27 @@
+<nav class='top-bar' data-topbar>
+  <ul class='title-area'>
+    <li class='name'>
+      <h1>
+        <a href='/'><%= image_tag('http://res.cloudinary.com/dljyjkavz/image/upload/v1391474941/New_DelFX_Logo_Oct_2013_sj70sg.png', :class => "nav-logo") %></a>
+      </h1>
+    </li>
+    <li class='toggle-topbar menu-icon'>
+      <a href='#'>
+        <span>Menu</span>
+      </a>
+    </li>
+  </ul>
+  <section class="top-bar-section">
+    <!-- Right Nav Section -->
+    <ul class="right">
+      <li><%= link_to  "Home", root_path %></li>
+      <li><%= link_to  "Works", works_path %></li>
+      <li><%= link_to  "Styleboards", styleboards_path %></li>
+      <li><%= link_to  "Storyboards", storyboards_path %></li>
+      <li><%= link_to  "Graphic Design", graphics_path %></li>
+      <li><%= link_to 'Contact', root_path %></li>
+    </ul>
+  </section>
+</nav>
+
+
