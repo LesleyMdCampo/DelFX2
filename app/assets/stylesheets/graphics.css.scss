@@ -1,3 +1,38 @@
 // Place all the styles related to the Graphics controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.graphic {
+  list-style: none;
+}
+
+.graphic-thumbnail {
+  max-width: 250px;
+  height: auto;
+}
+
+.graphics-loop {
+  margin-bottom: 20px;
+}
+
+/* #### Mobile Phones Portrait #### */
+@media only screen and (max-device-width: 480px) {
+  .graphic {
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+    column-count: 1;
+  }
+  .graphic-thumbnail {
+    max-width: 170px;
+    height: auto;
+  }
+}
+
+/* #### Mobile Phones Landscape #### */
+@media screen and (max-device-width: 640px) and (orientation: landscape){
+  .graphic {
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+    column-count: 1;
+  }
+}
