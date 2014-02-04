@@ -2,10 +2,7 @@
 
   <ul class="large-block-grid-3">
     <% @graphics.each do |graphic| %>
-      <li><img class="thumbnail" src="<%= graphic.image %>"><h3>
-        <%= link_to graphic.name, graphic %></li>
+      <li><img class="thumbnail" src="<%= graphic.image %>"><h3><%= link_to graphic.name, graphic %></li>
     <% end %>
   </ul>
 <br>
-
-<h2>Vector Illustrations</h2>
